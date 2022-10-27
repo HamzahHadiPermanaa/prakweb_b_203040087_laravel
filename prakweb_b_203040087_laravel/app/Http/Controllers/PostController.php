@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
@@ -15,11 +16,11 @@ class PostController extends Controller
         ]);
     }
 
-    public functionshow($slug)
+    public function show($slug)
     {
-        return view('post',[
+        return view('post', [
             "title" => "Single Post",
             "post" => Post::find($slug)
-         ]);
+        ]);
     }
 }
