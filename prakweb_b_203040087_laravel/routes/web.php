@@ -26,10 +26,10 @@ Route::get('/about', function () {
         "title" => "About",
         "name" => "Hamzah Hadi Permana",
         "email" => "203040087@mail.unpas.ac.id",
-        "image" => "hamzah.jpg"
+        "image" => "profile.png"
     ]);   
 });
 
 Route::get('/posts', [PostController::class, 'index']);
 // halaman single post
-Route::get('post/{slug}', [PostController::class, 'show']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
